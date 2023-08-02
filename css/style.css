@@ -1,4 +1,4 @@
-/* Global */
+/* ! Global */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +11,8 @@
   --color-headings: #160760;
   --color-body: #918c94;
 }
+
+/* ! Typography */
 html {
   font-size: 62.5%;
 }
@@ -37,7 +39,26 @@ h3 {
   font-size: 3rem;
 }
 
-/* media queries */
+/* ! Links */
+a {
+  text-decoration: none;
+}
+.links-arrow {
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-size: 2rem;
+  font-weight: bold;
+}
+.links-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin 0.5s ease;
+}
+.links-arrow:hover::after {
+  margin-left: 10px;
+}
+
+/* ! media queries */
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -50,5 +71,8 @@ h3 {
   }
   h3 {
     font-size: 2.4rem;
+  }
+  .links-arrow {
+    font-size: 1.5rem;
   }
 }
